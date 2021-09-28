@@ -2,7 +2,7 @@ package day04;
 
 import java.util.Arrays;
 
-public class arrayPush {
+public class ArrayPush {
 
     public static void main(String[] args) {
 
@@ -14,14 +14,16 @@ public class arrayPush {
         int[] temp = new int[arr.length + 1];
 
         //2. 원본 배열 데이터를 값 복사하여 신규배열로 이동
+        //기존 데이터를 큰방으로
         for (int i = 0; i < arr.length; i++) {
             temp[i] = arr[i];
         }
 
         //3. 새로운 데이터를 신규배열의 맨 끝에 추가
+        //맨 끝 방으로 안내
         temp[temp.length-1] = newData;
 
-        //4.주소 값 이전
+        //4.주소 값 이전 //주소 값 복사
         arr = temp; temp = null;
 
 
