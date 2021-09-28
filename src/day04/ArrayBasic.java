@@ -1,7 +1,10 @@
 package day04;
 
+<<<<<<< HEAD
 import java.util.Arrays;
 
+=======
+>>>>>>> origin/master
 public class ArrayBasic {
 
     public static void main(String[] args) {
@@ -11,6 +14,7 @@ public class ArrayBasic {
 
         //2. 배열 객체 생성 (새로운 방 예약)
         arr = new int[5];
+<<<<<<< HEAD
         //System.out.println(arr);
 
         //3.배열의 초기화
@@ -81,5 +85,9 @@ public class ArrayBasic {
         System.out.println("foods2: " +Arrays.toString(foods2));
 
 
+=======
+
+        System.out.println(arr);
+>>>>>>> origin/master
     }
 }
