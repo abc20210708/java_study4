@@ -11,12 +11,15 @@ public class ArrayBasic {
         //1. 배열 변수 선언
         int[] arr;
 
-        //2. 배열 객체 생성 (새로운 방 예약)(데이터 들어갈 공간 생성)(참조타입)
+        //2. 배열 객체 생성 (새로운 방 예약)
         arr = new int[5];
+
+
+        System.out.println(arr);
 
         //System.out.println(arr);
 
-        //3.배열의 초기화(값을 채움)()
+        //3.배열의 초기화
         arr[0] = 5;
         arr[1] = 10;
         arr[2] = arr[0] + 20;
@@ -24,7 +27,7 @@ public class ArrayBasic {
         arr[4] = 100;
         //arr[5] = 55;
 
-        //배열의 길이 - 총 공간 수
+        //배열에 길이 - 총 공간 수
         System.out.println(arr.length);
 
 
@@ -41,18 +44,19 @@ public class ArrayBasic {
         }//end for
 
 
+
         //값 목록으로 배열 생성하기
-
-
+        
+        
         //int 배열 타입
         // 값 목록으로 배열 생성시 new를 생략할 수 있는 경우는
         // 첫 배열변수 선언시 이외에는 불가능
         //int[] iArr = new int[] {10, 20, 30};//
         //int[] iArr = new int[3] 중괄호 쓰면 안에 3 지워야 함{10, 20, 30};//
         int[] iArr = {10, 20, 30};//처음 만들 때는 new int[] 생략이 가능함
-
+        
         iArr = new int[]{100, 200, 300}; //다시 수정하면 new int[] 꼭!
-
+        
         String[] foods = {"사과", "딸기", "복숭아", "파인애플"};
         System.out.println("foods.length = " + foods.length);
 
@@ -61,7 +65,7 @@ public class ArrayBasic {
 
         //배열을 생성만하고 초기화하지 않았다면?
         //각 타입의 기본값으로 자동 초기화
-        String[] bArr = new String[5];
+        String[] bArr = new  String[5];
         System.out.println(Arrays.toString(bArr));
 
         //배열 복사 알고리즘
@@ -80,10 +84,9 @@ public class ArrayBasic {
         foods2[3] = "애플";
 
         System.out.println("foods: " + Arrays.toString(foods));
-        System.out.println("foods2: " + Arrays.toString(foods2));
+        System.out.println("foods2: " +Arrays.toString(foods2));
 
 
-        System.out.println(arr);
 
     }
 }
