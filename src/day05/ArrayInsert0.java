@@ -13,6 +13,7 @@ public class ArrayInsert0 {
         //1.사이즈 하나 더 큰 배열 생성
         int[] temp = new int[arr.length + 1];
 
+
         //2. 기존 데이터를 전부 복사
         for (int i = 0; i < temp.length; i++) {
             temp[i] = arr[i];
