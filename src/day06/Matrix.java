@@ -42,6 +42,22 @@ public class Matrix {
             }//end for
             System.out.println();
         }//end for
+        
+        int[][][] arr3d = {
+                {{1,1,1},{2,2,7},{3,3,3}},
+                {{4,4,4},{3,3,3},{2,2,2}},
+                {{1,1,1},{2,2,2},{5,5,5}}
+        };
+        System.out.println(arr3d[0][1][2]);
+
+        for (int[][] ints : arr3d) {
+            for (int[] anInt : ints) {
+                for (int i : anInt) {
+
+                }//end for
+            }//end for
+        }//end for
+
 
 
     }
