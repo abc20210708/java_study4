@@ -33,7 +33,8 @@ public class Roulette {
             String name = sc.next();
             players[i] = name;
         }//end for
-        System.out.println(Arrays.toString(players) + "참가 ! ");
+        System.out.println(Arrays.toString(players) + " 참가! ");
+
 
         System.out.print("\n실탄 개수 (6 미만) ===> ");
         int bulletNum = sc.nextInt();
