@@ -8,6 +8,7 @@ public class Battery {
     int amount; //용량
 
     Battery(String companyName) {
+
         company = companyName;
     }
 
