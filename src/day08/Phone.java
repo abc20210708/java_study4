@@ -4,7 +4,7 @@ package day08;
 
 public class Phone {
 
-    //속상: 객체의 데이터
+    //속: 객체의 데이터
     //field
 
     //고유 속성
