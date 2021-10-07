@@ -20,6 +20,7 @@ public class Player {
     
     public Player(String name) {
         this(name,1);///항상 생성자의 첫 줄에 써야함
+        //this(name,10);///이렇게 두 번은 안 됨
         System.out.println("2번 생성자!");
         ///this 붙이면 필드  //
         ///나를 참조할 때
