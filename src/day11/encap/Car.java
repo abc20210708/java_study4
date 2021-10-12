@@ -19,7 +19,7 @@ public class Car {
     }
 
     //변속 기능
-    //setter: 필드가 privater 으로 감춰져 있을 때
+    //setter: 필드가 private 으로 감춰져 있을 때
     //필드 값을 변경해주는 메서드
     ////DNRP 말고 이상한 모드로 할까봐 감춰놓음
     //이름 지을 때는 set 하고 필드명
