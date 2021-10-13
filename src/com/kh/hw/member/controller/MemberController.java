@@ -13,7 +13,7 @@ public class MemberController {
 
     public MemberController() {
         m[0] = new Member("abc","김철수","aa","aa@aaa.aaa",'F',33);
-        m[1] = new Member("bbbbb ","강고결","bb","bbb@bbb.bbb",'M',34);
+        m[1] = new Member("bbbbb ","박영희","bb","bbb@bbb.bbb",'M',34);
         m[2] = new Member("ghi","김철수","cc","ccc@ccc.ccc",'M',28);
 
     }
@@ -72,7 +72,8 @@ public class MemberController {
     public Member[] searchName(String name) {
 
         //이름이 매칭된 회원들을 저장할 배열
-        Member[] foundMembers = {};
+
+        Member[] foundMembers = new Member[0];
         for (Member member : m) {
             if(member == null) break;
             if (name.equals(member.getName())) {
