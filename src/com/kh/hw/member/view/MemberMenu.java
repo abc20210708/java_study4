@@ -26,6 +26,7 @@ public class MemberMenu {
         while (true) {
           System.out.printf("# 최대 등록 가능한 회원 수는 %d명 입니다.\n", SIZE);
           int regCount = mc.existMemberNum();
+
           System.out.printf("# 현재 등록된 회원 수는 %d명 입니다.\n", regCount);
 
           System.out.println("====================");
