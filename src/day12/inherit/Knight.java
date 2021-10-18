@@ -10,6 +10,6 @@ public class Knight extends Warrior{
         this.rage = 11;
         info();
         attack();
-        fireSlash();
+        //fireSlash();
     }
 }//end class

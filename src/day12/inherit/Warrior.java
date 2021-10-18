@@ -1,5 +1,8 @@
 package day12.inherit;
 
+import day14.poly.casting.Parent;
+import day14.poly.player.Main;
+
 public class Warrior extends Player{
 
 
@@ -18,6 +21,11 @@ public class Warrior extends Player{
           this.rage = 100;
      }
 
+     public Warrior(String name) {
+          super(name);
+
+     }
+
      ////오버라이딩
      @Override
      public void info() {
@@ -25,8 +33,22 @@ public class Warrior extends Player{
           System.out.println("# 분노: " + rage);
      }
 
-    public void fireSlash() {
+    public void fireSlash(Player player) {
+          if (player instanceof Mage) {
+               player.hp -= 20;
+               System.out.println(player.name+"님이 20의 피해를 입었습니다.");
+              System.out.println(player.name+"님의 현재 체력: " + player.hp);
+          } else if (player instanceof Hunter) {
+              player.hp -= 15;
+               System.out.println(player.name + "님이 15의 피해를 입었습니다.");
+              System.out.println(player.name+"님의 현재 체력: " + player.hp);
+          } else if (player instanceof Warrior) {
+              player.hp -= 10;
+               System.out.println(player.name + "님이 10의 피해를 입었습니다.");
+              System.out.println(player.name+"님의 현재 체력: " + player.hp);
+          } else {
 
+          }
      }
 
 
