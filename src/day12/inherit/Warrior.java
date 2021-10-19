@@ -33,23 +33,33 @@ public class Warrior extends Player{
           System.out.println("# 분노: " + rage);
      }
 
-    public void fireSlash(Player player) {
-          if (player instanceof Mage) {
-               player.hp -= 20;
-               System.out.println(player.name+"님이 20의 피해를 입었습니다.");
-              System.out.println(player.name+"님의 현재 체력: " + player.hp);
-          } else if (player instanceof Hunter) {
-              player.hp -= 15;
-               System.out.println(player.name + "님이 15의 피해를 입었습니다.");
-              System.out.println(player.name+"님의 현재 체력: " + player.hp);
-          } else if (player instanceof Warrior) {
-              player.hp -= 10;
-               System.out.println(player.name + "님이 10의 피해를 입었습니다.");
-              System.out.println(player.name+"님의 현재 체력: " + player.hp);
-          } else {
+    public void fireSlash(Player target) {
 
-          }
-     }
+        System.out.printf("%s님이 %s님에게 FireSlash를 시전했습니다!\n"
+                , this.name, target.name);
+        int damage;
+        String job;
+        if (target instanceof Warrior) {
+            damage = 10;
+            job = "전사";
+        } else if (target instanceof Mage) {
+            damage = 20;
+            job = "마법사";
+        } else if (target instanceof Hunter) {
+            damage = 15;
+            job = "사냥꾼";
+        } else {
+            damage = 0;
+            job = "미확인";
+        }
+        target.hp -= damage;
+        System.out.printf("%s(%s)님이 %d의 피해를 입었습니다.\n"
+                , target.name, job, damage);
+        System.out.printf("%s님의 현재 체력: %d\n"
+                , target.name, target.hp);
+        System.out.println();
+    }
+
 
 
 }//end class
