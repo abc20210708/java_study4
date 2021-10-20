@@ -1,6 +1,7 @@
 package day06;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Roulette {
@@ -13,14 +14,19 @@ public class Roulette {
         int playerNum = 2;
         while (true) {
             System.out.print("게임 인원 (2 ~ 4명) ==> ");
-            playerNum = sc.nextInt();
-
-            if (playerNum < 2 || playerNum > 4) {
-                System.out.println("인원수가 올바르지 않습니다.");
-            }//end if
-            else {
-                break;
+            try {
+                playerNum = sc.nextInt();
+                if (playerNum < 2 || playerNum > 4) {
+                    System.out.println("인원수가 올바르지 않습니다.");
+                }//end if
+                else {
+                    break;
+                }
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+                System.out.println("숫자 2, 3, 4 중 하나를 입력해주세요 :)");
             }
+
         }//end while
 
         System.out.println("\n플레이어 이름을 등록합니다.");
@@ -36,9 +42,18 @@ public class Roulette {
         System.out.println(Arrays.toString(players) + " 참가! ");
 
 
-        System.out.print("\n실탄 개수 (6 미만) ===> ");
-        int bulletNum = sc.nextInt();
-        sc.nextLine();//Int,next,double 쓸 때 습관적으로
+        int bulletNum = 0;
+        while (true) {
+            try {
+                System.out.print("\n실탄 개수 (6 미만) ===> ");
+                bulletNum = sc.nextInt();
+                sc.nextLine();//Int,next,double 쓸 때 습관적으로
+                break;
+            } catch (Exception e) {
+                sc.nextLine();
+                System.out.println("6미만의 정수만 입력하세요!!!");
+            }
+        }
 
         //탄창 배열을 생성
         boolean[] magazine = new boolean[6];
